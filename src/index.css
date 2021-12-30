@@ -3,37 +3,4 @@ body {
   font-family: "Nunito-Regular", sans-serif;
 }
 
-@font-face {
-  font-family: "Nunito-Black";
-  src: url(./Fonts/Nunito-Black.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-ExtraBold";
-  src: url(./Fonts/Nunito-ExtraBold.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-Bold";
-  src: url(./Fonts/Nunito-Bold.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-SemiBold";
-  src: url(./Fonts/Nunito-SemiBold.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-Regular";
-  src: url(./Fonts/Nunito-Regular.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-Light";
-  src: url(./Fonts/Nunito-Light.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Nunito-ExtraLight";
-  src: url(./Fonts/Nunito-ExtraLight.ttf) format("ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
