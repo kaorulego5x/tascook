@@ -17,6 +17,7 @@
   background-color: #ff7c03 !important;
   padding: 0px 24px !important;
   font-family: "Nunito";
+  font-weight: 700 !important;
   border-radius: 12px !important;
   font-size: 14px !important;
   color: white;
@@ -38,7 +39,8 @@
 }
 
 .title {
-  font-family: "Nunito-Black";
+  font-family: "Nunito";
+  font-weight: 900;
   font-size: 24px;
   color: #ff7c03;
   margin: 0 !important;
@@ -49,7 +51,8 @@
   border: none !important;
   background-color: rgba(255, 124, 3, 8%) !important;
   padding: 0px 24px !important;
-  font-family: "Nunito-Bold";
+  font-family: "Nunito";
+  font-weight: 700 !important;
   border-radius: 12px !important;
   font-size: 14px !important;
   color: #ff7c03 !important;
@@ -70,7 +73,8 @@
   border: none !important;
   background-color: #f4f4f4 !important;
   padding: 0px 24px !important;
-  font-family: "Nunito-Bold";
+  font-family: "Nunito";
+  font-weight: 700 !important;
   border-radius: 12px !important;
   font-size: 14px !important;
   color: #341900 !important;
