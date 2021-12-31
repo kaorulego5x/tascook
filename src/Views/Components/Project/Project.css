@@ -1,0 +1,60 @@
+.project{
+    width: 150px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    font-family: "Nunito";
+}
+
+.projectName{
+    width: 100px;
+    height: 30px;
+    background: #F4F4F4;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 0 25px 0;
+    font-weight: 800 !important;
+}
+
+.completedTask{
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-weight: 800 !important;
+}
+
+.completedTask > p {
+    font-size: 1px;
+    margin-bottom: 0;
+}
+
+.completedTask > span {
+    font-size: 20px;
+}
+
+.detailButton{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1px;
+    color: white;
+    background: #FF7C03;
+    margin: 15px 0 15px 0;
+    box-shadow: 0px 2px 9px rgba(255, 124, 3, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rightArrow{
+    color: white;
+    font-size: 10px;
+}
