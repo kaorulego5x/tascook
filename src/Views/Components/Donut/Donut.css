@@ -1,0 +1,40 @@
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: "Nunito";
+    font-weight: 900 !important;
+    font-size: 20px;
+    color: #341900;
+}
+
+.pie::after{
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #FF7C03;
+    transform: translateY(-39.3px);
+}
+
+.pieEnd{
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #FF7C03;
+}
+
+.pieContent{
+    display: flex;
+    align-items: flex-end;
+}
+
+.pieContent > span {
+    font-size: 10px;
+    margin: 4px 1px;
+}
