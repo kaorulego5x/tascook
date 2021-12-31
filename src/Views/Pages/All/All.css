@@ -1,0 +1,55 @@
+.projects-row {
+  display: flex;
+  align-items: center;
+}
+
+.organization-name {
+  font-family: "Nunito";
+  font-size: 30px;
+  font-weight: 800;
+  color: #341900;
+  margin: 0px;
+  margin-right: 20px;
+}
+
+.projects-wrapper {
+  margin: 0px 40px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.pj-searchbar-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.pj-searchbar {
+  border: none;
+  background: none;
+  height: 40px;
+  border-radius: 10px;
+  width: 300px;
+  caret-color: #341900;
+  margin-right: 10px;
+}
+
+.pj-searchbar-icon {
+  font-size: 12px;
+  color: #341900;
+  margin: 0px 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

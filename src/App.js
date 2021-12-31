@@ -1,20 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./Views/Components/Header/Header";
-import { Donut } from "./Views/Components/Donut/Donut";
-import { Project } from "./Views/Components/Project/Project";
+import { All } from "./Views/Pages/All/All";
+import { Project } from "./Views/Pages/Projects/Projects";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [tab, setTab] = useState("all");
+
   return (
     <div className="App">
-      <Header />
-      <Project
-        taskName={"Tascook"}
-        completedTask={8}
-        taskSum={12}
-      />
+      <Header tab={tab} setTab={setTab} />
+      {tab == "all" ? <All /> : <Project />}
     </div>
   );
-}
+};
 
 export default App;
