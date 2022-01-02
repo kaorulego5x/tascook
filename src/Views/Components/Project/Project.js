@@ -7,18 +7,21 @@ export const Project = (props) => {
 
   return (
     <>
-        <div className="project">
-            <Donut calorie={60} />
-            <div className="projectName">
-                {props.taskName}
-            </div>
-            <div className="completedTask">
-                <p>Completed Task</p>
-                <span>{props.completedTask}/{props.taskSum}</span>
-            </div>
-            <button className="detailButton"><div></div><div>detail</div><FontAwesomeIcon icon={faAngleRight} className="rightArrow" /></button>
-            
-        </div>
+			<div className="project">
+					<div className="donut-wrapper">
+							<div className="donut">
+									<Donut calorie={props.calorie} />
+							</div>
+					</div>
+					<div className="project-name">
+							{props.projectName}
+					</div>
+					<div className="completed-task">
+							<p>Completed Task</p>
+							<span>{props.completedTask}/{props.taskSum}</span>
+					</div>
+					<button className="detail-button"><div></div><div>detail</div><FontAwesomeIcon icon={faAngleRight} className="right-arrow" /></button>
+			</div>
     </>
   );
 };
