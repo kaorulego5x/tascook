@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 import { Header } from "./Views/Components/Header/Header";
 import { All } from "./Views/Pages/All/All";
-import { Project } from "./Views/Pages/Projects/Projects";
-import { useState } from "react";
+import { Projects } from "./Views/Pages/Projects/Projects";
 
 const App = () => {
   const [tab, setTab] = useState("all");
@@ -11,7 +10,7 @@ const App = () => {
   return (
     <div className="App">
       <Header tab={tab} setTab={setTab} />
-      {tab == "all" ? <All /> : <Project />}
+      {tab == "all" ? <All /> : <Projects />}
     </div>
   );
 };

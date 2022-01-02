@@ -1,6 +1,6 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faList, faChartPie } from "@fortawesome/free-solid-svg-icons";
+import { faList, faChartPie, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
@@ -40,7 +40,7 @@ export const Header = (props) => {
           console.log("signed out!");
         }}
       >
-        <FontAwesomeIcon icon={faPlus} />
+        <FontAwesomeIcon icon={faSignOutAlt} />
         <p className="btn-label">Sign out</p>
       </Button>
     </div>
