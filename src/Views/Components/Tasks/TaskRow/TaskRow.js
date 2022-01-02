@@ -30,9 +30,9 @@ const Task = ({taskName, calorie, completedTask, taskSum, due, icon, select, han
 
 export const TaskRow = ({doc, index, handleChange, selectedTask}) => {
     return (
-        (index === 0) ? 
+        <div key={doc.taskID.toString()}>
+            {(index !== 0) && <div className="line"></div>}
             <Task
-                key={doc.taskID.toString()}
                 taskName={doc.taskName}
                 calorie={doc.calorie}
                 completedTask={doc.completedTask}
@@ -43,20 +43,6 @@ export const TaskRow = ({doc, index, handleChange, selectedTask}) => {
                 select={selectedTask[index]}
                 handleChange={() => handleChange(index)}
             />
-        :
-            <div key={doc.taskID.toString()}>
-                <div className="line"></div>
-                <Task
-                    taskName={doc.taskName}
-                    calorie={doc.calorie}
-                    completedTask={doc.completedTask}
-                    taskSum={doc.taskSum}
-                    due={doc.due} //date型です。
-                    icon={doc.icon}
-                    done={doc.done}
-                    select={selectedTask[index]}
-                    handleChange={() => handleChange(index)}
-                />
-            </div>
+        </div>
     );
 }
