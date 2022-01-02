@@ -1,40 +1,40 @@
 .pie {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    font-family: "Nunito";
-    font-weight: 900 !important;
-    font-size: 20px;
-    color: #341900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  font-family: "Nunito";
+  font-weight: 900 !important;
+  font-size: 20px;
+  color: #341900;
 }
 
-.pie::after{
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background: #FF7C03;
-    transform: translateY(-39.3px);
+.pie::after {
+  content: "";
+  position: absolute;
+  width: 29.2px;
+  height: 29.2px;
+  border-radius: 50%;
+  background: #ff7c03;
+  transform: translateY(-55.1px);
 }
 
-.pieEnd{
-    position: absolute;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background: #FF7C03;
+.pie-end {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff7c03;
 }
 
-.pieContent{
-    display: flex;
-    align-items: flex-end;
+.pie-content {
+  display: flex;
+  align-items: flex-end;
 }
 
-.pieContent > span {
-    font-size: 10px;
-    margin: 4px 1px;
+.pie-content > span {
+  font-size: 10px;
+  margin: 4px 1px;
 }

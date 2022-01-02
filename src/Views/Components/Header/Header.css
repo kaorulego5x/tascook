@@ -25,6 +25,7 @@
   display: flex !important;
   align-items: center !important;
   box-shadow: 0px 4px 8px 0px rgba(255, 124, 3, 40%);
+  white-space: nowrap !important;
 }
 
 .essential-btn:focus,
@@ -47,7 +48,7 @@
   margin-right: 32px !important;
 }
 
-.selectedTabButton {
+.selected-tab-button {
   border: none !important;
   background-color: rgba(255, 124, 3, 8%) !important;
   padding: 0px 24px !important;
@@ -63,13 +64,13 @@
   margin-right: 24px;
 }
 
-.selectedTabButton:focus,
-.selectedTabButton:active {
+.selected-tab-button:focus,
+.selected-tab-button:active {
   outline: none !important;
   box-shadow: none !important;
 }
 
-.unselectedTabButton {
+.unselected-tab-button {
   border: none !important;
   background-color: white !important;
   padding: 0px 24px !important;
@@ -85,8 +86,8 @@
   margin-right: 24px;
 }
 
-.unselectedTabButton:focus,
-.unselectedTabButton:active {
+.unselected-tab-button:focus,
+.unselected-tab-button:active {
   outline: none !important;
   box-shadow: none !important;
 }

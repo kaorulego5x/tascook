@@ -5,27 +5,29 @@ import { Button } from "react-bootstrap";
 import { useState } from "react";
 
 export const Header = (props) => {
-  const [tab, setTab] = useState("all");
-
   return (
-    <div className="header-outer-wrapper">
+    <div className="header-outer-wrapper fluid-container">
       <div className="header-left-wrapper">
         <p className="title">Tascook</p>
         <Button
           onClick={() => {
-            setTab("all");
+            props.setTab("all");
           }}
-          className={tab == "all" ? "selectedTabButton" : "unselectedTabButton"}
+          className={
+            props.tab == "all" ? "selected-tab-button" : "unselected-tab-button"
+          }
         >
           <FontAwesomeIcon icon={faChartPie} />
           <p className="btn-label">all</p>
         </Button>
         <Button
           onClick={() => {
-            setTab("projects");
+            props.setTab("projects");
           }}
           className={
-            tab == "projects" ? "selectedTabButton" : "unselectedTabButton"
+            props.tab == "projects"
+              ? "selected-tab-button"
+              : "unselected-tab-button"
           }
         >
           <FontAwesomeIcon icon={faList} />

@@ -1,32 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState, useEffect } from "react";
-import { collection } from "./Data/MockTasks";
+import { useState } from "react";
 import { Header } from "./Views/Components/Header/Header";
-import { Tasks } from "./Views/Components/Tasks/Tasks";
+import { All } from "./Views/Pages/All/All";
+import { Projects } from "./Views/Pages/Projects/Projects";
 
-function App() {
-
-  const selects = collection.map((doc) => {
-    return doc.select
-  });
-
-  const [selectedTask, setSelectedTask] = useState(selects);
-
-  const handleChange = (i) => {
-    setSelectedTask(prevSelectedTask =>
-      prevSelectedTask.map((a, b) => {
-        return b === i ? true : false;
-      })
-    );
-  };
+const App = () => {
+  const [tab, setTab] = useState("all");
 
   return (
     <div className="App">
-      <Header />
-      <Tasks collection={collection} handleChange={(i) => handleChange(i)} selectedTask={selectedTask}/>
+      <Header tab={tab} setTab={setTab} />
+      {tab == "all" ? <All /> : <Projects />}
     </div>
   );
-}
+};
 
 export default App;
