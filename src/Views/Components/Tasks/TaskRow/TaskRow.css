@@ -1,41 +1,3 @@
-.title{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 10px;
-    color: #341900;
-}
-
-.title > h2 {
-    margin: 10px;
-    font-family: "Nunito";
-    font-weight: 800 !important;
-    font-size: 22px;
-    color: #341900;
-}
-.title > p {
-    margin: 0 0 12px 0;
-    color: #341900;
-    font-size: 11px;
-    font-weight: 700 !important;
-}
-
-.title-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tasks{
-    background: white;
-    width: 65%;
-    border-radius: 30px;
-    padding: 20px 40px;
-    margin: 20px auto;
-    font-family: "Nunito";
-    font-weight: 800;
-    color: #341900;
-}
-
 .task{
     display: flex;
     justify-content: space-between;
@@ -44,8 +6,17 @@
     cursor: pointer;
 }
 
+.task:hover{
+    background-color: #f4f4f4;
+    transition: 0.5s;
+}
+
 .selected{
     background: #fff4eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     cursor: default;
 }
 
@@ -116,7 +87,7 @@
     font-size: 5px;
     font-weight: 600 !important;
     color: white;
-    margin: 0 6px;
+    margin: 0 8px;
     transform: translateY(1px);
 }
 
@@ -131,7 +102,7 @@
     font-size: 5px;
     font-weight: 600 !important;
     color: white;
-    margin: 0 6px;
+    margin: 0 8px;
     transform: translateY(1px);
 }
 
@@ -140,7 +111,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 10px 0 15px;
-    width: 50px;
+    width: 52px;
 }
 
 .task-icon{
@@ -154,6 +125,14 @@
 .percentage{
     font-size: 11px;
     transform: translateY(1px);
+}
+
+.date-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px 0 0;
+    width: 55px;
 }
 
 .date-icon{
@@ -172,7 +151,7 @@
     width: 23px;
     height: auto;
     border-radius: 50%;
-    margin: 0 20px;
+    margin: 0 20px 0 10px;
 }
 
 .kebab-icon{
@@ -183,6 +162,5 @@
 
 .line{
     height: 1px;
-    background: #341900;
-    opacity: 15%;
+    background: #f4f4f4;
 }
