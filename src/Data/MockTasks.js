@@ -9,7 +9,13 @@ export const collection = [
     taskSum : 10,
     due : "9/23", //date型です
     icon : elon,
-    select : false
+    select : true,
+    name : "Elon",
+    childTasks : {
+      header : {done:true, select:false, detail:"detail"},
+      component : {done:true, select:false, detail:"detailaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+      dataBase : {done:true, select:false, detail:"detail"}
+    }
   },
   {
     taskID : 2,
@@ -19,7 +25,13 @@ export const collection = [
     taskSum : 10,
     due : "5/23", //date型です
     icon : elon,
-    select : false
+    select : false,
+    name : "Elon",
+    childTasks : {
+      header : {done:false, select:false, detail:"detail"},
+      component : {done:false, select:false, detail:"detail"},
+      dataBase : {done:true, select:false, detail:"detail"}
+    }
   },
   {
     taskID : 3,
@@ -29,7 +41,13 @@ export const collection = [
     taskSum : 10,
     due : "10/7", //date型です
     icon : elon,
-    select : false
+    select : false,
+    name : "Elon",
+    childTasks : {
+      header : {done:false, select:false, detail:"detail"},
+      component : {done:false, select:false, detail:"detail"},
+      dataBase : {done:false, select:false, detail:"detail"}
+    }
   },
   {
     taskID : 4,
@@ -39,7 +57,13 @@ export const collection = [
     taskSum : 12,
     due : "9/2", //date型です
     icon : elon,
-    select : false
+    select : false,
+    name : "Elon",
+    childTasks : {
+      header : {done:false, select:false, detail:"detail"},
+      component : {done:true, select:false, detail:"detail"},
+      dataBase : {done:false, select:false, detail:"detail"}
+    }
   },
   {
     taskID : 5,
@@ -49,6 +73,12 @@ export const collection = [
     taskSum : 12,
     due : "4/19", //date型です
     icon : elon,
-    select : false
+    select : false,
+    name : "Elon",
+    childTasks : {
+      header : {done:false, select:false, detail:"detail"},
+      component : {done:false, select:false, detail:"detail"},
+      dataBase : {done:false, select:false, detail:"detail"}
+    }
   }
 ];

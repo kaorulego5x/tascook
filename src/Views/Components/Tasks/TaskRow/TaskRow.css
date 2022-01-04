@@ -20,8 +20,18 @@
   cursor: default;
 }
 
-.left,
-.right {
+.tasks{
+    background: white;
+    width: 52%;
+    border-radius: 30px;
+    padding: 20px 40px;
+    margin: 20px auto;
+    font-family: "Nunito";
+    font-weight: 800;
+    color: #341900;
+}
+
+.left, .right {
   display: flex;
   align-items: center;
 }
