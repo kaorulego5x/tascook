@@ -9,11 +9,11 @@ export const All = (props) => {
   const [pjName, setPjName] = useState("");
 
   return (
-    <div class="fluid-container">
-      <div class="projects-wrapper">
-        <div class="title-wrapper">
+    <div className="fluid-container">
+      <div className="projects-wrapper">
+        <div className="title-wrapper">
           <h1 className="organization-name">GDSC Cloud League</h1>
-          <div class="pj-searchbar-wrapper">
+          <div className="pj-searchbar-wrapper">
             <FontAwesomeIcon icon={faSearch} className="pj-searchbar-icon" />
             <input
               className="pj-searchbar"

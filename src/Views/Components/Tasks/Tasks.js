@@ -1,7 +1,6 @@
 import "./Tasks.css";
 import { TaskRow } from "./TaskRow/TaskRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faCopy} from "@fortawesome/free-regular-svg-icons";
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 export const Tasks = (props) => {
