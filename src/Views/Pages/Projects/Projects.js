@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Tasks } from "../../Components/Tasks/Tasks";
 import { collection } from "../../../Data/MockTasks";
+import { Bar } from "../../Components/Bar/Bar";
 
 export const Projects = (props) => {
   const selects = collection.map((doc) => {
@@ -18,6 +19,9 @@ export const Projects = (props) => {
   };
 
   return (
-  <Tasks collection={collection} handleChange={(i) => handleChange(i)} selectedTask={selectedTask}/>
+    <>
+      {/* <Tasks collection={collection} handleChange={(i) => handleChange(i)} selectedTask={selectedTask}/> */}
+      <Bar />
+    </>
   );
 };
