@@ -4,13 +4,13 @@ import { collection } from "../../../Data/MockTasks";
 
 export const Projects = (props) => {
   const selects = collection.map((doc) => {
-    return doc.select
+    return doc.select;
   });
 
   const [selectedTask, setSelectedTask] = useState(selects);
 
   const handleChange = (i) => {
-    setSelectedTask(prevSelectedTask =>
+    setSelectedTask((prevSelectedTask) =>
       prevSelectedTask.map((a, b) => {
         return b === i ? true : false;
       })
@@ -18,6 +18,10 @@ export const Projects = (props) => {
   };
 
   return (
-  <Tasks collection={collection} handleChange={(i) => handleChange(i)} selectedTask={selectedTask}/>
+    <Tasks
+      collection={collection}
+      handleChange={(i) => handleChange(i)}
+      selectedTask={selectedTask}
+    />
   );
 };

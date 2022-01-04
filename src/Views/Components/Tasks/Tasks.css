@@ -1,44 +1,44 @@
-.tasks{
-    background: white;
-    width: 65%;
-    min-width: 500px;
-    border-radius: 30px;
-    padding: 20px 40px;
-    margin: 20px auto;
-    font-family: "Nunito";
-    font-weight: 800;
-    color: #341900;
+.tasks {
+  background: white;
+  width: 65%;
+  min-width: 500px;
+  border-radius: 30px;
+  padding: 20px 40px;
+  margin: 20px auto;
+  font-family: "Nunito";
+  font-weight: 800;
+  color: #341900;
 }
 
-.title{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 10px;
-    color: #341900;
+.title {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  color: #341900;
 }
 
 .title > h2 {
-    margin: 10px;
-    font-family: "Nunito";
-    font-weight: 800 !important;
-    font-size: 22px;
-    color: #341900;
+  margin: 10px;
+  font-family: "Nunito";
+  font-weight: 800 !important;
+  font-size: 22px;
+  color: #341900;
 }
 .title > p {
-    margin: 0 0 12px 0;
-    color: #341900;
-    font-size: 11px;
-    font-weight: 700 !important;
+  margin: 0 0 12px 0;
+  color: #341900;
+  font-size: 11px;
+  font-weight: 700 !important;
 }
 
-.title-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0 10px 0;
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 10px 0;
 }
 
-.selected{
-    background: #fff4eb;
-    cursor: default;
+.selected {
+  background: #fff4eb;
+  cursor: default;
 }
