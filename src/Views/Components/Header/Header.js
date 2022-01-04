@@ -1,6 +1,10 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faList, faChartPie, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faList,
+  faChartPie,
+  faSignOutAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 

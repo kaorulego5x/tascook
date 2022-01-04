@@ -20,7 +20,7 @@ export const collection = [
   {
     taskID : 2,
     taskName : "Sandlot",
-    calorie : 8,
+    calorie : 1,
     completedTask : 6,
     taskSum : 10,
     due : "5/23", //date型です
@@ -36,10 +36,10 @@ export const collection = [
   {
     taskID : 3,
     taskName : "Campusfire",
-    calorie : 8,
+    calorie : 5,
     completedTask : 3,
     taskSum : 10,
-    due : "3/23", //date型です
+    due : "10/7", //date型です
     icon : elon,
     select : false,
     name : "Elon",
@@ -52,10 +52,10 @@ export const collection = [
   {
     taskID : 4,
     taskName : "Arcade",
-    calorie : 8,
+    calorie : 5,
     completedTask : 8,
     taskSum : 12,
-    due : "5/23", //date型です
+    due : "9/2", //date型です
     icon : elon,
     select : false,
     name : "Elon",
@@ -69,9 +69,9 @@ export const collection = [
     taskID : 5,
     taskName : "Sandlot",
     calorie : 8,
-    completedTask : 6,
-    taskSum : 10,
-    due : "5/23", //date型です
+    completedTask : 1,
+    taskSum : 12,
+    due : "4/19", //date型です
     icon : elon,
     select : false,
     name : "Elon",
