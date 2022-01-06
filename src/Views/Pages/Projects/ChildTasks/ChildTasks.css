@@ -1,0 +1,79 @@
+.child-tasks {
+  width: 22%;
+  height: 100vh; /*ここわからん*/
+  background-color: white;
+  padding-top: 84px;
+}
+
+.title-wrapper,
+.child-tasks-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  margin-top: 24px;
+}
+
+.child-tasks-detail {
+  margin-bottom: 30px;
+}
+
+.task-name {
+  color: #341900;
+  font-family: "Nunito";
+  font-weight: 700 !important;
+  font-size: 23px;
+  margin: 0;
+}
+
+.kebab {
+  color: #341900;
+  width: 10px;
+}
+
+.child-tasks-left,
+.child-tasks-right {
+  display: flex;
+  align-items: center;
+  font-family: "Nunito";
+  font-weight: 600 !important;
+}
+
+.child-percentage,
+.fraction,
+.child-due,
+.manager-name {
+  font-size: 13px;
+  font-family: "Nunito";
+  font-weight: 700 !important;
+}
+
+.manager-name {
+  margin-left: 4px;
+}
+
+.fraction {
+  margin: 0 5px;
+}
+
+.child-task-icon {
+  width: 10px;
+  height: auto;
+  color: #341900;
+  transform: rotate(90deg) scale(-1, 1);
+  margin-right: 5px;
+}
+
+.child-date-icon {
+  width: 10px;
+  height: auto;
+  color: #341900;
+  margin: 0 3px 0 5px;
+  transform: scale(0.9);
+}
+
+.child-manager-icon {
+  width: 20px;
+  height: auto;
+  border-radius: 50%;
+}

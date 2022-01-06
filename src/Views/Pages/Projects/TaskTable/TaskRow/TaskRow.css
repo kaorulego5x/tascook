@@ -8,7 +8,6 @@
 
 .task:hover {
   background-color: #f4f4f4;
-  transition: 0.5s;
 }
 
 .selected {
@@ -20,18 +19,19 @@
   cursor: default;
 }
 
-.tasks{
-    background: white;
-    width: 52%;
-    border-radius: 30px;
-    padding: 20px 40px;
-    margin: 20px auto;
-    font-family: "Nunito";
-    font-weight: 800;
-    color: #341900;
+.tasks {
+  background: white;
+  width: 52%;
+  border-radius: 30px;
+  padding: 20px 40px;
+  margin: 20px auto;
+  font-family: "Nunito";
+  font-weight: 800;
+  color: #341900;
 }
 
-.left, .right {
+.left,
+.right {
   display: flex;
   align-items: center;
 }
@@ -75,14 +75,14 @@
 .taskName {
   margin: 0 10px;
   font-size: 14px;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   transform: translateY(1px);
 }
 
 .taskName-done {
   margin: 0 10px;
   font-size: 14px;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   transform: translateY(1px);
   opacity: 0.5;
 }

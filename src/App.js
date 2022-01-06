@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Header } from "./Views/Components/Header/Header";
 import { All } from "./Views/Pages/All/All";
 import { Projects } from "./Views/Pages/Projects/Projects";
+import { mockProjects } from "./Data/MockProjects";
 
 const App = () => {
   const [tab, setTab] = useState("all");

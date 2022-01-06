@@ -8,11 +8,11 @@
   font-size: 30px;
   font-weight: 800;
   color: #341900;
-  margin: 0px;
-  margin-right: 20px;
+  margin: 20px 20px 0px 0px;
 }
 
-.projects-wrapper {
+.project-wrapper {
+  padding-top: 84px;
   margin: 0px 40px;
 }
 

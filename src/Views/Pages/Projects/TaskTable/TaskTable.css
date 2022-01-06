@@ -1,10 +1,11 @@
-.tasks {
+.task-table {
   background: white;
   width: 65%;
   min-width: 500px;
   border-radius: 30px;
   padding: 20px 40px;
-  margin: 20px auto;
+  margin: 0px 40px;
+  margin-top: 124px;
   font-family: "Nunito";
   font-weight: 800;
   color: #341900;

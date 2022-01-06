@@ -1,29 +1,44 @@
 import "./Project.css";
-import { useState } from "react";
-import { Tasks } from "../../Components/Tasks/Tasks";
-import { collection } from "../../../Data/MockTasks";
-import { ChildTasks } from "../../Components/ChildTasks/ChildTasks"
+import { useState, useEffect, useCallback } from "react";
+import { TaskTable } from "./TaskTable/TaskTable";
+import { mockTasks } from "../../../Data/MockTasks";
+import { mockProjects } from "../../../Data/MockProjects";
+import { ChildTasks } from "./ChildTasks/ChildTasks";
 
 export const Projects = (props) => {
-  const selects = collection.map((doc) => {
-    return doc.select;
-  });
+  const [projects, setProjects] = useState(mockProjects);
+  const [taskIDs, setTaskIDs] = useState([]);
+  const [tasks, setTasks] = useState([]);
+  const [selectedProject, setSelectedProject] = useState("tascook");
+  const [selectedTaskID, setSelectedTaskID] = useState();
 
-  const [selectedTask, setSelectedTask] = useState(selects);
+  useEffect(() => {
+    const project = projects.find((project) => project.name == selectedProject);
+    setTaskIDs(project.taskIDs);
+  }, [projects]);
 
-  const handleChange = (i) => {
-    setSelectedTask((prevSelectedTask) =>
-      prevSelectedTask.map((a, b) => {
-        return b === i ? true : false;
-      })
-    );
-  };
+  useEffect(() => {
+    const tempTasks = [];
+    taskIDs.map((taskID) => {
+      tempTasks.push(mockTasks.find((task) => task.taskID == taskID));
+    });
+    console.log(tempTasks);
+    setTasks(tempTasks);
+  }, [taskIDs]);
 
   return (
-    <div className="parent">
+    <div className="projects-wrapper">
       <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
-      <Tasks collection={collection} handleChange={(i) => handleChange(i)} selectedTask={selectedTask}/>
-      <ChildTasks collection={collection} selectedTask={selectedTask}/>
+      <TaskTable
+        tasks={tasks}
+        selectTask={(taskID) => setSelectedTaskID(taskID)}
+        selectedTaskID={selectedTaskID}
+      />
+      {selectedTaskID && (
+        <ChildTasks
+          task={tasks.find((task) => task.taskID == selectedTaskID)}
+        />
+      )}
     </div>
   );
 };

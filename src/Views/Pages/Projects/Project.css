@@ -1,11 +1,12 @@
-.parent{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.projects-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.hata-kun{
-    width: 18%;
-    height: 80vh;
-    background-color: white;
+.hata-kun {
+  width: 320px;
+  height: 100vh;
+  background-color: white;
 }
