@@ -1,5 +1,5 @@
 .child-tasks {
-  width: 22%;
+  width: 325px;
   height: 100vh; /*ここわからん*/
   background-color: white;
   padding-top: 84px;
@@ -22,7 +22,7 @@
   color: #341900;
   font-family: "Nunito";
   font-weight: 700 !important;
-  font-size: 23px;
+  font-size: 13px;
   margin: 0;
 }
 
