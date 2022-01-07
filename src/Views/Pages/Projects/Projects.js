@@ -4,6 +4,7 @@ import { TaskTable } from "./TaskTable/TaskTable";
 import { mockTasks } from "../../../Data/MockTasks";
 import { mockProjects } from "../../../Data/MockProjects";
 import { ChildTasks } from "./ChildTasks/ChildTasks";
+import { Bar } from "../../Components/Bar/Bar";
 
 export const Projects = (props) => {
   const [projects, setProjects] = useState(mockProjects);
@@ -29,11 +30,22 @@ export const Projects = (props) => {
   return (
     <div className="projects-wrapper">
       <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
-      <TaskTable
-        tasks={tasks}
-        selectTask={(taskID) => setSelectedTaskID(taskID)}
-        selectedTaskID={selectedTaskID}
-      />
+      <div className="info">
+        <div className="project-head">
+          <div className="mid-project-name">Tascook</div>
+          <div className="project-week">12/26~1/1</div>
+        </div>
+        <div className="chart-wrapper">
+          <Bar />
+          <DonutChart completedTask={70} taskSum={135} />
+          <DonutChart completedTask={4} taskSum={5} color={"brown"} />
+        </div>
+        <TaskTable
+          tasks={tasks}
+          selectTask={(taskID) => setSelectedTaskID(taskID)}
+          selectedTaskID={selectedTaskID}
+        />
+      </div>
       {selectedTaskID && (
         <ChildTasks
           task={tasks.find((task) => task.taskID == selectedTaskID)}
