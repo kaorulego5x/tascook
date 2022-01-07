@@ -4,6 +4,7 @@ import { TaskTable } from "./TaskTable/TaskTable";
 import { mockTasks } from "../../../Data/MockTasks";
 import { mockProjects } from "../../../Data/MockProjects";
 import { ChildTasks } from "./ChildTasks/ChildTasks";
+import { DonutChart } from "../../Components/DonutChart/DonutChart";
 import { Bar } from "../../Components/Bar/Bar";
 
 export const Projects = (props) => {

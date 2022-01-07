@@ -5,6 +5,50 @@
   width: 100%;
 }
 
+.info {
+  width: 52%;
+  padding-top: 20px;
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mid-project-name {
+  font-family: "Nunito";
+  font-weight: 700 !important;
+  font-size: 28px;
+  color: #341900;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  width: 105px;
+}
+
+.project-week {
+  width: 96px;
+  height: 25px;
+  background-color: white;
+  border-radius: 6px;
+  font-family: "Nunito";
+  font-weight: 700 !important;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  padding-top: 1px;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 500px;
+}
+
 .hata-kun {
   width: 320px;
   height: 100vh;
