@@ -4,12 +4,9 @@ import { TaskTable } from "./TaskTable/TaskTable";
 import { mockTasks } from "../../../Data/MockTasks";
 import { mockProjects } from "../../../Data/MockProjects";
 import { ChildTasks } from "./ChildTasks/ChildTasks";
-<<<<<<< HEAD
 import { DonutChart } from "../../Components/DonutChart/DonutChart";
 import { Bar } from "../../Components/Bar/Bar";
-=======
 import { Link } from "react-router-dom";
->>>>>>> b061f7731f5d3001a1ae84a8ef24edf0e803344a
 
 export const Projects = (props) => {
   const [projects, setProjects] = useState(mockProjects);
