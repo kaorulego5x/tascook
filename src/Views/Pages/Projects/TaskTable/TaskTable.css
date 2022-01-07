@@ -1,6 +1,6 @@
 .task-table {
   background: white;
-  width: 65%;
+  width: 100%;
   min-width: 500px;
   border-radius: 30px;
   padding: 20px 40px;
@@ -32,7 +32,7 @@
   font-weight: 700 !important;
 }
 
-.title-wrapper {
+.table-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;

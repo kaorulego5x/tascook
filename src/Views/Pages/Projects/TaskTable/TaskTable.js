@@ -22,7 +22,7 @@ export const TaskTable = ({ tasks, selectTask, selectedTaskID }) => {
   return (
     <>
       <div className="task-table">
-        <div className="title-wrapper">
+        <div className="table-title-wrapper">
           <div className="title">
             <h2>Tasks</h2>
             <h2>{toCook}</h2>

@@ -37,7 +37,7 @@ export const All = (props) => {
   return (
     <div className="fluid-container">
       <div className="project-wrapper">
-        <div className="title-wrapper">
+        <div className="all-title-wrapper">
           <h1 className="organization-name">GDSC Cloud League</h1>
           <div className="pj-searchbar-wrapper">
             <FontAwesomeIcon icon={faSearch} className="pj-searchbar-icon" />
@@ -54,6 +54,7 @@ export const All = (props) => {
           {projects.map((project) => (
             <ProjectStatBox
               key={project.projectID}
+              projectID={project.projectID}
               taskName={project.name}
               completedTask={project.cookedTask}
               taskSum={project.taskSum}

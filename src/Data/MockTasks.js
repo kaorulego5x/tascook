@@ -67,7 +67,7 @@ export const mockTasks = [
     taskID: "tascook4",
     taskName: "ニューラルリンク使用テスト",
     calorie: 21,
-    due: "20XX/10/10",
+    due: "10/10",
     childTasks: [
       {
         taskName: "メタバースに侵入する",

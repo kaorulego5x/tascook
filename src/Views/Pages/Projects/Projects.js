@@ -4,6 +4,7 @@ import { TaskTable } from "./TaskTable/TaskTable";
 import { mockTasks } from "../../../Data/MockTasks";
 import { mockProjects } from "../../../Data/MockProjects";
 import { ChildTasks } from "./ChildTasks/ChildTasks";
+import { Link } from "react-router-dom";
 
 export const Projects = (props) => {
   const [projects, setProjects] = useState(mockProjects);
@@ -28,7 +29,7 @@ export const Projects = (props) => {
 
   return (
     <div className="projects-wrapper">
-      <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
+      {/*<div className="hata-kun"></div>*/}
       <TaskTable
         tasks={tasks}
         selectTask={(taskID) => setSelectedTaskID(taskID)}
