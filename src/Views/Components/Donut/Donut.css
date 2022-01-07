@@ -1,4 +1,5 @@
-.pie {
+.pieO,
+.pieB {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,17 +8,31 @@
   border-radius: 50%;
   font-family: "Nunito";
   font-weight: 900 !important;
-  font-size: 20px;
+  font-size: 30px;
   color: #341900;
 }
 
-.pie::after {
+.little {
+  transform: scale(0.65);
+}
+
+.pieO::after {
   content: "";
   position: absolute;
   width: 29.2px;
   height: 29.2px;
   border-radius: 50%;
   background: #ff7c03;
+  transform: translateY(-55.1px);
+}
+
+.pieB::after {
+  content: "";
+  position: absolute;
+  width: 29.2px;
+  height: 29.2px;
+  border-radius: 50%;
+  background: #9a4a00;
   transform: translateY(-55.1px);
 }
 
@@ -36,5 +51,5 @@
 
 .pie-content > span {
   font-size: 10px;
-  margin: 4px 1px;
+  margin: 10px 1px;
 }

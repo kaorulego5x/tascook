@@ -6,14 +6,15 @@
 }
 
 .info {
-  width: 52%;
+  width: 853px;
   padding-top: 20px;
+  transform: translateY(84px);
 }
 
 .project-head {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 0 40px 15px 40px;
 }
 
 .mid-project-name {
@@ -47,6 +48,7 @@
   justify-content: space-between;
   align-items: center;
   min-width: 500px;
+  margin: 0 40px;
 }
 
 .hata-kun {
