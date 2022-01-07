@@ -40,7 +40,9 @@ export const TaskRow = ({
         </div>
         <div className="date-wrapper">
           <FontAwesomeIcon icon={faCalendarAlt} className="date-icon" />
-          <div className="date">{due}</div>
+          <div className="date-right">
+            <div className="date">{due}</div>
+          </div>
         </div>
         <FontAwesomeIcon icon={faEllipsisV} className="kebab-icon" />
       </div>

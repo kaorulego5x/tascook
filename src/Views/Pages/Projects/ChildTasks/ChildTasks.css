@@ -1,14 +1,13 @@
 .child-tasks {
-  width: 600px;
-  height: 100vh; /*ここわからん*/
+  width: 20%;
+  min-width: 250px;
+  height: 100vh;
   background-color: white;
   padding-top: 84px;
 }
 
-.title-wrapper,
-.child-tasks-detail {
+.title-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 30px;
   margin-top: 24px;
@@ -16,6 +15,13 @@
 
 .child-tasks-detail {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 33px;
+  margin-top: 24px;
+  font-family: "Nunito";
+  font-weight: 600 !important;
 }
 
 .task-name {
@@ -29,6 +35,7 @@
 .kebab {
   color: #341900;
   width: 10px;
+  margin-left: 10px;
 }
 
 .child-tasks-left,
@@ -48,12 +55,21 @@
   font-weight: 700 !important;
 }
 
+.child-percentage {
+  margin-left: 4px;
+}
+
 .manager-name {
   margin-left: 4px;
 }
 
 .fraction {
   margin: 0 5px;
+}
+
+.achieve {
+  display: flex;
+  align-items: center;
 }
 
 .child-task-icon {

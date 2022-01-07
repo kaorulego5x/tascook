@@ -4,6 +4,8 @@ import { TaskTable } from "./TaskTable/TaskTable";
 import { mockTasks } from "../../../Data/MockTasks";
 import { mockProjects } from "../../../Data/MockProjects";
 import { ChildTasks } from "./ChildTasks/ChildTasks";
+import { DonutChart } from "../../Components/DonutChart/DonutChart";
+import { Bar } from "../../Components/Bar/Bar";
 import { Link } from "react-router-dom";
 
 export const Projects = (props) => {
@@ -27,18 +29,50 @@ export const Projects = (props) => {
     setTasks(tempTasks);
   }, [taskIDs]);
 
+  const toggleChildTaskAchieve = (index) => {
+    const prevTasks = tasks;
+    prevTasks.find((task) => task.taskID == selectedTaskID).childTasks[
+      index
+    ].complete = !tasks.find((task) => task.taskID == selectedTaskID)
+      .childTasks[index].complete;
+    setTasks(prevTasks);
+  };
+
+  useEffect(() => {
+    console.log("tasks is change");
+  }, [tasks]);
+
+  const calcCalorie = () => {
+    let sum;
+    let done;
+  };
+
   return (
     <div className="projects-wrapper">
-      {/*<div className="hata-kun"></div>*/}
-      <TaskTable
-        tasks={tasks}
-        selectTask={(taskID) => setSelectedTaskID(taskID)}
-        selectedTaskID={selectedTaskID}
-      />
-      {selectedTaskID && (
+      <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
+      <div className="info">
+        <div className="project-head">
+          <div className="mid-project-name">Tascook</div>
+          <div className="project-week">12/26~1/1</div>
+        </div>
+        <div className="chart-wrapper">
+          <Bar />
+          <DonutChart completedTask={70} taskSum={135} />
+          <DonutChart completedTask={4} taskSum={5} color={"brown"} />
+        </div>
+        <TaskTable
+          tasks={tasks}
+          selectTask={(taskID) => setSelectedTaskID(taskID)}
+          selectedTaskID={selectedTaskID}
+        />
+      </div>
+      {selectedTaskID ? (
         <ChildTasks
           task={tasks.find((task) => task.taskID == selectedTaskID)}
+          toggleChildTaskAchieve={toggleChildTaskAchieve}
         />
+      ) : (
+        <div className="space-holder"></div>
       )}
     </div>
   );

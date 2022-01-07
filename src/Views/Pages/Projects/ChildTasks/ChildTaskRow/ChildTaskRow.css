@@ -103,6 +103,7 @@
 }
 
 .add-task-input {
+  width: 75%;
   font-size: 15px;
   font-family: "Nunito";
   font-weight: 700 !important;
