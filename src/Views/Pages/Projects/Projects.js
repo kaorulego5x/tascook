@@ -29,6 +29,24 @@ export const Projects = (props) => {
     setTasks(tempTasks);
   }, [taskIDs]);
 
+  const toggleChildTaskAchieve = (index) => {
+    const prevTasks = tasks;
+    prevTasks.find((task) => task.taskID == selectedTaskID).childTasks[
+      index
+    ].complete = !tasks.find((task) => task.taskID == selectedTaskID)
+      .childTasks[index].complete;
+    setTasks(prevTasks);
+  };
+
+  useEffect(() => {
+    console.log("tasks is change");
+  }, [tasks]);
+
+  const calcCalorie = () => {
+    let sum;
+    let done;
+  };
+
   return (
     <div className="projects-wrapper">
       <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
@@ -48,10 +66,13 @@ export const Projects = (props) => {
           selectedTaskID={selectedTaskID}
         />
       </div>
-      {selectedTaskID && (
+      {selectedTaskID ? (
         <ChildTasks
           task={tasks.find((task) => task.taskID == selectedTaskID)}
+          toggleChildTaskAchieve={toggleChildTaskAchieve}
         />
+      ) : (
+        <div className="space-holder"></div>
       )}
     </div>
   );

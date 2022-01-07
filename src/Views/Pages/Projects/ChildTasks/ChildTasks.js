@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarAlt, faCopy } from "@fortawesome/free-regular-svg-icons";
 
-export const ChildTasks = ({ task }) => {
+export const ChildTasks = ({ task, toggleChildTaskAchieve }) => {
   /* const handleChange = (key) => {
     setSelectedChildTask((prevSelectedChildTask) =>
       prevSelectedChildTask.map((a, b) => {
@@ -29,24 +29,27 @@ export const ChildTasks = ({ task }) => {
           <FontAwesomeIcon icon={faEllipsisV} className="kebab" />
         </div>
         <div className="child-tasks-detail">
-          <div className="child-tasks-left">
+          <div className="achieve">
             <FontAwesomeIcon icon={faCopy} className="child-task-icon" />
             <div className="child-percentage">
               {Math.floor((cookedChildTask / childTaskSum) * 100)}%
             </div>
-            <div className="fraction">
-              ({cookedChildTask}/{childTaskSum})
-            </div>
-            <FontAwesomeIcon icon={faCalendarAlt} className="child-date-icon" />
-            <div className="child-due">{task.due}</div>
           </div>
-          <div className="child-tasks-right">
-            <div className="manager-name">{task.name}</div>
+          <div className="fraction">
+            ({cookedChildTask}/{childTaskSum})
           </div>
+          <FontAwesomeIcon icon={faCalendarAlt} className="child-date-icon" />
+          <div className="child-due">{task.due}</div>
         </div>
+
         {childTasks.map((childTask, childTaskInd) => (
-          <ChildTaskRow childTask={childTask} childTaskInd={childTaskInd} />
+          <ChildTaskRow
+            childTask={childTask}
+            childTaskInd={childTaskInd}
+            toggleChildTaskAchieve={toggleChildTaskAchieve}
+          />
         ))}
+
         <div className="add-task">
           <div className="add-task-wrapper">
             <div className="add-box">

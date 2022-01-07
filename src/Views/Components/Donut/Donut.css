@@ -4,6 +4,10 @@
 }
 
 .pie-content > span {
-  font-size: 10px;
+  font-size: 15px;
   margin: 4px 3px;
+}
+
+.little {
+  transform: scale(0.65);
 }

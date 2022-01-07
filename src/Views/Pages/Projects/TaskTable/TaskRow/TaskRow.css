@@ -143,7 +143,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 5px 0 0;
-  width: 55px;
+  width: 65px;
 }
 
 .date-icon {
@@ -153,22 +153,22 @@
   color: #341900;
 }
 
+.date-right {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+}
+
 .date {
   font-size: 11px;
   transform: translateY(1px);
-}
-
-.manager-icon {
-  width: 23px;
-  height: auto;
-  border-radius: 50%;
-  margin: 0 20px 0 10px;
 }
 
 .kebab-icon {
   color: #341900;
   width: 10px;
   transform: scale(0.8);
+  margin: 0 10px;
 }
 
 .line {
