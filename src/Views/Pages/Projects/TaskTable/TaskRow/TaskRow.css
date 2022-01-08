@@ -19,19 +19,8 @@
   cursor: default;
 }
 
-.tasks {
-  background: white;
-  width: 52%;
-  border-radius: 30px;
-  padding: 20px 40px;
-  margin: 20px auto;
-  font-family: "Nunito";
-  font-weight: 800;
-  color: #341900;
-}
-
-.left,
-.right {
+.taskrow-left,
+.taskrow-right {
   display: flex;
   align-items: center;
 }
@@ -88,41 +77,34 @@
 }
 
 .calorie {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  background: #ff7c03;
+  width: 27px;
+  height: 27px;
+  border-radius: 9px;
+  background-color: #ff7c03;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5px;
-  font-weight: 600 !important;
-  color: white;
-  margin: 0 8px;
-  transform: translateY(1px);
+  margin-right: 30px;
 }
 
 .calorie-done {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  background: #9a4a00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5px;
-  font-weight: 600 !important;
-  color: white;
-  margin: 0 8px;
-  transform: translateY(1px);
+  background-color: #9a4a00;
 }
 
-.task-wrapper {
+.calorie-text {
+  margin: 0px;
+  transform: translateX(0.5px) translateY(1px);
+  font-size: 13px;
+  font-weight: 700 !important;
+  color: white;
+}
+
+.cooked-percentage-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px 0 15px;
-  width: 52px;
+  margin-right: 25px;
+  width: 65px;
 }
 
 .task-icon {
@@ -133,35 +115,37 @@
   transform: rotate(90deg) scale(-1, 1);
 }
 
-.percentage {
-  font-size: 11px;
+.cooked-percentage-text {
+  font-size: 14px;
   transform: translateY(1px);
+  margin-bottom: 0px;
+  font-weight: 700;
 }
 
 .date-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 5px 0 0;
   width: 65px;
+  margin-right: 5px;
 }
 
 .date-icon {
-  width: 5px;
+  font-size: 16px;
   height: auto;
-  margin: 0 10px 0 10px;
   color: #341900;
 }
 
-.date-right {
+.due {
   display: flex;
   justify-content: center;
   width: 40px;
 }
 
-.date {
-  font-size: 11px;
+.due-text {
+  font-size: 14px;
   transform: translateY(1px);
+  font-weight: 700;
 }
 
 .kebab-icon {

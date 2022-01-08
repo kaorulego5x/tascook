@@ -1,43 +1,40 @@
 .projects-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
 }
 
 .info {
-  width: 60%;
-  min-width: 830px;
-  padding: 20px 40px 0 0;
-  transform: translateY(84px);
+  width: 100%;
+  margin-top: 84px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.project-head {
+.project-header {
   display: flex;
   align-items: center;
-  width: 100%;
+  margin-top: 20px;
 }
 
-.mid-project-name {
+.project-name {
   font-family: "Nunito";
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   font-size: 28px;
   color: #341900;
   padding: 0;
   display: flex;
   align-items: flex-start;
   width: 105px;
-  margin: 0 20px 20px 40px;
+  margin: 0 0px 20px 40px;
 }
 
 .project-week {
   width: 96px;
-  height: 25px;
+  height: 32px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 12px;
   font-family: "Nunito";
   font-weight: 700 !important;
   font-size: 12px;
@@ -48,13 +45,12 @@
   padding-top: 1px;
 }
 
-.chart-wrapper {
+.projects-chart-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 500px;
-  margin: 0 40px;
-  width: 95%;
+  padding: 0px 40px;
+  width: 100%;
 }
 
 .hata-kun {
@@ -62,4 +58,9 @@
   min-width: 180px;
   height: 100vh;
   background-color: white;
+}
+
+.task-table-wrapper {
+  padding: 20px 40px;
+  width: 100%;
 }

@@ -1,5 +1,5 @@
 .child-task,
-.add-task {
+.add-child-task {
   width: 80%;
   height: 30px;
   background: white;
@@ -79,7 +79,7 @@
   overflow-wrap: break-word;
 }
 
-.add-task-wrapper {
+.add-child-task-wrapper {
   display: flex;
   align-items: center;
   padding: 5px;
@@ -102,11 +102,11 @@
   transform: translate(-1px, -9.5px);
 }
 
-.add-task-input {
+.add-child-task-input {
   width: 75%;
   font-size: 15px;
   font-family: "Nunito";
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   margin-left: 10px;
   border: none;
   opacity: 0.8;

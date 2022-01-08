@@ -1,10 +1,9 @@
 .task-table {
   background: white;
-  width: 95%;
+  padding: 30px;
+  width: 100%;
   min-width: 500px;
   border-radius: 30px;
-  padding: 10px 40px 15px 40px;
-  margin: 20px 40px;
   font-family: "Nunito";
   font-weight: 800;
   color: #341900;
@@ -24,21 +23,83 @@
   font-size: 22px;
   color: #341900;
 }
+
 .title > p {
-  margin: 0 0 12px 0;
+  margin: 0 0 10px -5px;
   color: #341900;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700 !important;
 }
 
-.table-title-wrapper {
+.task-table-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 0 10px 0;
+  margin: 0px 0px 10px 0;
 }
 
 .selected {
   background: #fff4eb;
   cursor: default;
+}
+
+.sort-btn {
+  margin-right: 16px;
+}
+
+.add-task-wrapper {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding-right: 77px;
+}
+
+.add-task-circle {
+  width: 15px;
+  height: 15px;
+  background-color: #ff7c03;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.add-task-icon {
+  color: white;
+  font-size: 9px;
+}
+
+.calorie-selector {
+  border: none;
+  border-radius: 9px;
+  height: 27px;
+  padding: 0px 10px;
+  background-color: #f4f4f4;
+  color: #341900;
+}
+
+.add-task-input {
+  width: 300px;
+  font-size: 15px;
+  font-family: "Nunito";
+  font-weight: 500 !important;
+  margin-left: 10px;
+  border: none;
+  opacity: 0.8;
+  caret-color: grey;
+}
+
+.add-task-label {
+  margin-bottom: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.horizontal-flex {
+  display: flex;
+  align-items: center;
 }

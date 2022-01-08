@@ -29,12 +29,11 @@ export const Projects = (props) => {
     setTasks(tempTasks);
   }, [taskIDs]);
 
-  const toggleChildTaskAchieve = (index) => {
-    const prevTasks = tasks;
-    prevTasks.find((task) => task.taskID == selectedTaskID).childTasks[
-      index
-    ].complete = !tasks.find((task) => task.taskID == selectedTaskID)
-      .childTasks[index].complete;
+  const completeChildTask = (childTaskInd) => {
+    let prevTasks = tasks.slice();
+    let taskInd = prevTasks.findIndex((task) => task.taskID == selectedTaskID);
+    prevTasks[taskInd].childTasks[childTaskInd].complete = !prevTasks[taskInd]
+      .childTasks[childTaskInd].complete;
     setTasks(prevTasks);
   };
 
@@ -42,34 +41,54 @@ export const Projects = (props) => {
     console.log("tasks is change");
   }, [tasks]);
 
-  const calcCalorie = () => {
-    let sum;
-    let done;
+  const addTask = (newTaskName, newTaskCalorie) => {
+    let prevTasks = tasks.slice();
+    prevTasks.push({
+      taskID: newTaskName + newTaskCalorie,
+      taskName: newTaskName,
+      calorie: newTaskCalorie,
+      due: "9/23",
+      childTasks: [],
+    });
+    setTasks(prevTasks);
+  };
+
+  const addChildTask = (newTaskVal) => {
+    let prevTasks = tasks.slice();
+    let taskInd = prevTasks.findIndex((task) => task.taskID == selectedTaskID);
+    prevTasks[taskInd].childTasks.push({
+      taskName: newTaskVal,
+      complete: false,
+    });
+    setTasks(prevTasks);
   };
 
   return (
     <div className="projects-wrapper">
-      <div className="hata-kun"></div> {/*畑君が作ったものが入る*/}
       <div className="info">
-        <div className="project-head">
-          <div className="mid-project-name">Tascook</div>
-          <div className="project-week">12/26~1/1</div>
+        <div className="project-header">
+          <div className="project-name">Tascook</div>
+          <div className="project-week">1/1~1/7</div>
         </div>
-        <div className="chart-wrapper">
+        <div className="projects-chart-wrapper">
           <Bar />
           <DonutChart completedTask={70} taskSum={135} />
           <DonutChart completedTask={4} taskSum={5} color={"brown"} />
         </div>
-        <TaskTable
-          tasks={tasks}
-          selectTask={(taskID) => setSelectedTaskID(taskID)}
-          selectedTaskID={selectedTaskID}
-        />
+        <div className="task-table-wrapper">
+          <TaskTable
+            tasks={tasks}
+            selectTask={(taskID) => setSelectedTaskID(taskID)}
+            selectedTaskID={selectedTaskID}
+            addTask={addTask}
+          />
+        </div>
       </div>
       {selectedTaskID ? (
         <ChildTasks
           task={tasks.find((task) => task.taskID == selectedTaskID)}
-          toggleChildTaskAchieve={toggleChildTaskAchieve}
+          completeChildTask={completeChildTask}
+          addChildTask={addChildTask}
         />
       ) : (
         <div className="space-holder"></div>

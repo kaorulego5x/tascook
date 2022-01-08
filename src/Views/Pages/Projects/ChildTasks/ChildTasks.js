@@ -5,15 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarAlt, faCopy } from "@fortawesome/free-regular-svg-icons";
 
-export const ChildTasks = ({ task, toggleChildTaskAchieve }) => {
-  /* const handleChange = (key) => {
-    setSelectedChildTask((prevSelectedChildTask) =>
-      prevSelectedChildTask.map((a, b) => {
-        return b === key ? true : false;
-      })
-    );
-  }; */
-
+export const ChildTasks = ({ task, completeChildTask, addChildTask }) => {
+  const [newTaskVal, setNewTaskVal] = useState("");
   const childTasks = task.childTasks;
   const cookedChildTask = childTasks.filter((childTask) => {
     return childTask.complete;
@@ -29,33 +22,55 @@ export const ChildTasks = ({ task, toggleChildTaskAchieve }) => {
           <FontAwesomeIcon icon={faEllipsisV} className="kebab" />
         </div>
         <div className="child-tasks-detail">
-          <div className="achieve">
-            <FontAwesomeIcon icon={faCopy} className="child-task-icon" />
-            <div className="child-percentage">
-              {Math.floor((cookedChildTask / childTaskSum) * 100)}%
+          <div className="cooked-wrapper">
+            <div className="achieve">
+              <FontAwesomeIcon icon={faCopy} className="child-task-icon" />
+              <div className="child-percentage">
+                {childTaskSum != 0
+                  ? Math.floor((cookedChildTask / childTaskSum) * 100)
+                  : 0}
+                %
+              </div>
+            </div>
+            <div className="fraction">
+              ({cookedChildTask}/{childTaskSum})
             </div>
           </div>
-          <div className="fraction">
-            ({cookedChildTask}/{childTaskSum})
+          <div className="due-wrapper">
+            <FontAwesomeIcon icon={faCalendarAlt} className="child-date-icon" />
+            <div className="child-due">{task.due}</div>
           </div>
-          <FontAwesomeIcon icon={faCalendarAlt} className="child-date-icon" />
-          <div className="child-due">{task.due}</div>
         </div>
 
         {childTasks.map((childTask, childTaskInd) => (
           <ChildTaskRow
             childTask={childTask}
             childTaskInd={childTaskInd}
-            toggleChildTaskAchieve={toggleChildTaskAchieve}
+            completeChildTask={completeChildTask}
           />
         ))}
 
-        <div className="add-task">
-          <div className="add-task-wrapper">
+        <div className="add-child-task">
+          <div className="add-child-task-wrapper">
             <div className="add-box">
               <FontAwesomeIcon icon={faPlus} className="add-icon" />
             </div>
-            <input className="add-task-input" placeholder="Add a task"></input>
+            <input
+              className="add-child-task-input"
+              placeholder="Add a task"
+              value={newTaskVal}
+              onChange={(e) => {
+                setNewTaskVal(e.target.value);
+              }}
+              onKeyPress={(e) => {
+                if (e.key == "Enter") {
+                  e.preventDefault();
+                  if (newTaskVal == "") return;
+                  addChildTask(newTaskVal);
+                  setNewTaskVal("");
+                }
+              }}
+            ></input>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 .child-tasks {
-  width: 20%;
-  min-width: 250px;
+  width: 500px;
   height: 100vh;
   background-color: white;
   padding-top: 84px;
@@ -8,7 +7,7 @@
 
 .title-wrapper {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 0 30px;
   margin-top: 24px;
 }
@@ -16,7 +15,6 @@
 .child-tasks-detail {
   margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 40px 0 33px;
   margin-top: 24px;
@@ -28,7 +26,7 @@
   color: #341900;
   font-family: "Nunito";
   font-weight: 700 !important;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -84,7 +82,7 @@
   width: 10px;
   height: auto;
   color: #341900;
-  margin: 0 3px 0 5px;
+  margin: 0 10px 0 5px;
   transform: scale(0.9);
 }
 
@@ -92,4 +90,15 @@
   width: 20px;
   height: auto;
   border-radius: 50%;
+}
+
+.cooked-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.due-wrapper {
+  display: flex;
+  align-items: center;
 }

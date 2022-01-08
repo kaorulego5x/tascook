@@ -6,13 +6,13 @@ import { faCheck, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 export const ChildTaskRow = ({
   childTask,
   childTaskInd,
-  toggleChildTaskAchieve,
+  completeChildTask,
 }) => {
   return (
     <div
       className="child-task"
       key={childTaskInd}
-      onClick={(index) => toggleChildTaskAchieve(childTaskInd)}
+      onClick={() => completeChildTask(childTaskInd)}
     >
       <div className="check-name-wrapper">
         {childTask.complete ? (

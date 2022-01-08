@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 export const ProjectStatBox = (props) => {
   return (
-    <div className="project-stat-box">
-      <p className="project-name">{props.taskName}</p>
+    <div className="p-project-stat-box">
+      <p className="p-project-name">{props.taskName}</p>
       <div className="donut-container">
         <Donut
           calorie={Math.floor((props.completedTask / props.taskSum) * 100)}

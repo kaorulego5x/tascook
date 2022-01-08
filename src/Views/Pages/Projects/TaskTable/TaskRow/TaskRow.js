@@ -17,32 +17,35 @@ export const TaskRow = ({
     return childTask.complete;
   }).length;
   const childTaskSum = childTasks.length;
-  const cooked = cookedChildTask == childTaskSum;
+  const cooked = childTaskSum != 0 && cookedChildTask == childTaskSum;
 
   return (
     <div
       className={selectedTaskID === taskID ? "selected" : "task"}
       onClick={() => selectTask(taskID)}
     >
-      <div className="left">
+      <div className="taskrow-left">
         <div className={cooked ? "circle-border-done" : "circle-border"}>
           <div className={cooked ? "circle-done" : "circle"}></div>
         </div>
         <div className={cooked ? "taskName-done" : "taskName"}>{taskName}</div>
       </div>
-      <div className="right">
-        <div className={cooked ? "calorie-done" : "calorie"}>{calorie}</div>
-        <div className="task-wrapper">
+      <div className="taskrow-right">
+        <div className={"calorie" + " " + `${cooked && "calorie-done"}`}>
+          <p className="calorie-text">{calorie}</p>
+        </div>
+        <div className="cooked-percentage-wrapper">
           <FontAwesomeIcon icon={faCopy} className="task-icon" />
-          <div className="percentage">
-            {Math.floor((cookedChildTask / childTaskSum) * 100)}%
-          </div>
+          <p className="cooked-percentage-text">
+            {childTaskSum != 0
+              ? Math.floor((cookedChildTask / childTaskSum) * 100)
+              : 0}
+            %
+          </p>
         </div>
         <div className="date-wrapper">
           <FontAwesomeIcon icon={faCalendarAlt} className="date-icon" />
-          <div className="date-right">
-            <div className="date">{due}</div>
-          </div>
+          <div className="due-text">{due}</div>
         </div>
         <FontAwesomeIcon icon={faEllipsisV} className="kebab-icon" />
       </div>
